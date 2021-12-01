@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.d-block {
+  display: block;
+}
+
+button.hamburger {
+  height: 50px;
+  width: 50px;
+}
+
+div.hamburger {
+  height: 50px;
+  width: 50px;
+}
+div.hamburger > .inner {
+  top: 50%;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0 transparent solid;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  opacity: 1;
+  overflow: visible;
+  padding: 5px;
+  text-transform: none;
+  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+.hamburger:hover span.bar {
+  background-color: #000;
+}
+.hamburger:hover > .inner:nth-child(1)::before, .hamburger:hover > .inner:nth-child(1)::after, .hamburger:hover > .inner:nth-child(2)::before, .hamburger:hover > .inner:nth-child(2)::after, .hamburger:hover > .inner:nth-child(3)::before, .hamburger:hover > .inner:nth-child(3)::after,
+.hamburger:hover span.bar:nth-child(1)::before,
+.hamburger:hover span.bar:nth-child(1)::after,
+.hamburger:hover span.bar:nth-child(2)::before,
+.hamburger:hover span.bar:nth-child(2)::after,
+.hamburger:hover span.bar:nth-child(3)::before,
+.hamburger:hover span.bar:nth-child(3)::after {
+  background-color: #000;
+}
+.hamburger.active {
+  background-color: transparent;
+}
+.hamburger.active span.bar {
+  background-color: #000;
+}
+.hamburger.active > .inner:nth-child(1)::before, .hamburger.active > .inner:nth-child(1)::after, .hamburger.active > .inner:nth-child(2)::before, .hamburger.active > .inner:nth-child(2)::after, .hamburger.active > .inner:nth-child(3)::before, .hamburger.active > .inner:nth-child(3)::after,
+.hamburger.active span.bar:nth-child(1)::before,
+.hamburger.active span.bar:nth-child(1)::after,
+.hamburger.active span.bar:nth-child(2)::before,
+.hamburger.active span.bar:nth-child(2)::after,
+.hamburger.active span.bar:nth-child(3)::before,
+.hamburger.active span.bar:nth-child(3)::after {
+  background-color: #000;
+}
+.hamburger > .inner {
+  margin: 0;
+  margin-top: -1px;
+  position: relative;
+  width: 100%;
+}
+.hamburger span.bar {
+  background-color: #000;
+  border-radius: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+}
+.hamburger span.bar:nth-child(1) {
+  top: -10px;
+}
+.hamburger span.bar:nth-child(3) {
+  top: 10px;
+}
+.hamburger:focus {
+  outline: 0;
+}
+
+.hamburger--simple span.bar {
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--simple span.bar:nth-child(1) {
+  top: 0;
+  transform: translate3d(0, -8px, 0);
+}
+.hamburger--simple span.bar:nth-child(2) {
+  top: 0;
+  transform: translate3d(0, 8px, 0);
+}
+.hamburger--simple span.bar:nth-child(3) {
+  display: none;
+}
+.hamburger--simple.active span.bar:nth-child(1) {
+  transform: rotate(-45deg) translate3d(0, 0, 0);
+}
+.hamburger--simple.active span.bar:nth-child(2) {
+  transform: rotate(45deg) translate3d(0, 0, 0);
+}
+
+.hamburger {
+  display: none;
+  margin-right: 20px;
+}
+.hamburger .inner {
+  display: block;
+}
+@media screen and (max-width: 992px) {
+  .hamburger {
+    display: inline-block;
+    margin-left: auto;
+    z-index: 1;
+  }
+}
+
+.header {
+  max-width: 1600px;
+}
+
+.header-topick {
+  background: url(../img/topick__header.jpg) center/cover;
+  max-height: 500px;
+}
+
+.container-topick {
+  margin: auto;
+  max-width: 1162px;
+}
+
+.topick {
+  padding: 95px 0 139px;
+}
+.topick__title {
+  color: #ffffff;
+  font-size: 90px;
+  font-size: calc(50px + 40 * ((100vw - 320px) / 1280));
+  line-height: 62px;
+  margin-bottom: 0;
+  font-family: "BebasNeue", sans-serif;
+}
+.topick__text {
+  margin-top: -6px;
+  font-size: 2.25rem;
+  color: #fff;
+  margin-left: 27px;
+  font-family: "BebasNeue", sans-serif;
+}
+
+.title-left:first-child {
+  margin-left: 56px;
+}
+
+.title-left:nth-child(2) {
+  margin-left: 12px;
+}
+
+.header__navbar {
+  background-color: #252222;
+}
+
+.container {
+  max-width: 940px;
+  margin: auto;
+}
+
+.navbar {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  font-size: 48px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "BebasNeue", sans-serif;
+}
+
+.nav {
+  margin: auto;
+}
+.nav__link {
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: #fff;
+  transition: 0.4s;
+  margin-left: 50px;
+  font-family: "BebasNeue", sans-serif;
+}
+.nav__link:hover {
+  color: #65BA99;
+  text-transform: uppercase;
+  border-bottom: 2px solid #65BA99;
+}
+
+.network__link {
+  text-decoration: none;
+  margin-left: 12px;
+}
+.network__link:first-child {
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

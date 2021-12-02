@@ -10,17 +10,20 @@
   padding: 95px 0 139px
   &__title
     color: #ffffff
-    font-size: 90px
     +adp-font(90, 50)
-    line-height: 62px
+    line-height: 0.8
     margin-bottom: 0
     font-family: 'BebasNeue', sans-serif
+    +media(320px)
   &__text
     margin-top: -6px
-    font-size: 2.25rem
     color: #fff
     margin-left: 27px
     font-family: 'BebasNeue', sans-serif
+    +adp-font(36, 22)
+    +media(320px)
+      line-height: 18px
+      margin-top: 0
 .title-left:first-child
   margin-left: 56px
 .title-left:nth-child(2)
@@ -40,6 +43,14 @@
   font-family: 'BebasNeue', sans-serif
 .nav 
   margin: auto
+  transition: 0.4s
+  +media(992px)
+    +abs-full($bg: url(../img/grey-gradient-background-1439642315lMp.jpg))
+    +flex($cross: center, $dir: column, $main: center)
+    margin-left: none
+    transform: translate(-100%)
+  &.active
+    transform: translate(0)
   &__link
     text-decoration: none
     font-size: 1.125rem
@@ -47,6 +58,8 @@
     transition: 0.4s
     margin-left: 50px
     font-family: 'BebasNeue', sans-serif
+    +media(992px)
+      margin-left: 0
     &:hover
       color: #65BA99
       text-transform: uppercase

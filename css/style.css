@@ -150,18 +150,23 @@ div.hamburger > .inner {
 }
 .topick__title {
   color: #ffffff;
-  font-size: 90px;
   font-size: calc(50px + 40 * ((100vw - 320px) / 1280));
-  line-height: 62px;
+  line-height: 0.8;
   margin-bottom: 0;
   font-family: "BebasNeue", sans-serif;
 }
 .topick__text {
   margin-top: -6px;
-  font-size: 2.25rem;
   color: #fff;
   margin-left: 27px;
   font-family: "BebasNeue", sans-serif;
+  font-size: calc(22px + 14 * ((100vw - 320px) / 1280));
+}
+@media screen and (max-width: 320px) {
+  .topick__text {
+    line-height: 18px;
+    margin-top: 0;
+  }
 }
 
 .title-left:first-child {
@@ -196,6 +201,26 @@ div.hamburger > .inner {
 
 .nav {
   margin: auto;
+  transition: 0.4s;
+}
+@media screen and (max-width: 992px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/grey-gradient-background-1439642315lMp.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: none;
+    transform: translate(-100%);
+  }
+}
+.nav.active {
+  transform: translate(0);
 }
 .nav__link {
   text-decoration: none;
@@ -204,6 +229,11 @@ div.hamburger > .inner {
   transition: 0.4s;
   margin-left: 50px;
   font-family: "BebasNeue", sans-serif;
+}
+@media screen and (max-width: 992px) {
+  .nav__link {
+    margin-left: 0;
+  }
 }
 .nav__link:hover {
   color: #65BA99;

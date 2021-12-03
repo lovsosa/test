@@ -1,6 +1,6 @@
 .header
   max-width: 1600px
-.header-topick 
+.header-topick
   background: url(../img/topick__header.jpg) center / cover
   max-height: 500px
 .container-topick
@@ -34,23 +34,30 @@
   max-width: 940px
   margin: auto
 .navbar
+  position: relative
   min-height: 100px
-  +flex($cross: center)
+  +flex($cross: center,  $wrap: wrap)
 .logo__icon
   font-size: 48px
   color: #fff
   cursor: pointer
   font-family: 'BebasNeue', sans-serif
-.nav 
+.nav
   margin: auto
   transition: 0.4s
   +media(992px)
-    +abs-full($bg: url(../img/grey-gradient-background-1439642315lMp.jpg))
-    +flex($cross: center, $dir: column, $main: center)
-    margin-left: none
-    transform: translate(-100%)
-  &.active
-    transform: translate(0)
+    +flex($cross: center, $main: center)
+    position: absolute
+    top: 100%
+    background: #252222
+    max-height: 0
+    overflow: hidden
+    order: 1
+    width: 100%
+    &.active
+      max-height: 300px
+    +media(430px)
+      +flex($dir: column)
   &__link
     text-decoration: none
     font-size: 1.125rem
@@ -58,14 +65,22 @@
     transition: 0.4s
     margin-left: 50px
     font-family: 'BebasNeue', sans-serif
-    +media(992px)
+    +media(430px)
       margin-left: 0
+    +media(992px)
+      margin-bottom: 15px
     &:hover
       color: #65BA99
       text-transform: uppercase
       border-bottom: 2px solid #65BA99
-.network__link
-  text-decoration: none
-  margin-left: 12px
-  &:first-child
-    margin-left: 0
+    &:first-child
+      margin-left: 0
+.network
+  +media(344px)
+    margin-left: auto
+    margin-right: 20px
+  .network__link
+    text-decoration: none
+    margin-left: 12px
+    &:first-child
+      margin-left: 0

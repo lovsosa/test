@@ -1,0 +1,19 @@
+.header.header__portfolio 
+  .container
+    h1.portfolio__title portfolio /
+    p.portfolio__text Glamour  fashion  personal  street  portrait
+    .flex__container
+      - for (var i = 1; i <= 18; i++)
+        .flex_box.search__position
+          img.port__image(src="../img/port/port" + i + ".jpg", alt="alt")
+          .post__icon 
+            a.icon__search(href="#")
+              img(src="../img/icon/zoom.png", alt="alt")
+            a.icon__link(href="#")
+              img(src="../img/icon/polaroid.png", alt="alt")
+            a.icon__link(href="#")
+              img(src="../img/icon/link.png", alt="alt")
+            a.icon__link(href="#")
+              img(src="../img/icon/info.png", alt="alt")
+            a.icon__link(href="#")
+              img(src="../img/icon/like.png", alt="alt")

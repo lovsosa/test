@@ -212,6 +212,31 @@ div.hamburger > .inner {
   margin: 0 15px 15px;
 }
 
+.header__mider {
+  background: url(../img/header__mider.jpg) center/cover;
+  min-height: 300px;
+}
+
+.mider__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+.mider__content .mider__title {
+  color: #fff;
+  text-align: center;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 2.25rem;
+}
+.mider__content .mider__text {
+  margin-right: 50px;
+  color: #fff;
+  text-align: end;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 1.5rem;
+}
+
 .header {
   max-width: 1600px;
 }

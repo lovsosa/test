@@ -2,7 +2,7 @@
   .container
     h1.portfolio__title portfolio /
     p.portfolio__text Glamour  fashion  personal  street  portrait
-    .flex__container
+    .flex__container.portfolio__flex
       - for (var i = 1; i <= 18; i++)
         .flex_box.search__position
           img.port__image(src="../img/port/port" + i + ".jpg", alt="alt")
@@ -20,7 +20,7 @@
 .header.header__mider
   .container
     .mider__content
-      h1.mider__title 
+      h1.mider__title
         |Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         | Aenean vel diam non neque iaculis sollicitudin.
       p.mider__text - lorem ipsum -

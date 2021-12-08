@@ -12,6 +12,28 @@ body {
   display: block;
 }
 
+@media screen and (max-width: 640px) {
+  .flex__container-news {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex__container-news .news__content {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex__container-news .news__tags {
+    margin: 20px 0 15px;
+  }
+  .flex__container-news .sidebar {
+    padding: 0 75px;
+  }
+  .flex__container-news .news__content-image {
+    max-width: 100%;
+  }
+}
+
 button.hamburger {
   height: 35px;
   width: 35px;
@@ -216,7 +238,7 @@ div.hamburger > .inner {
 }
 
 .header__mider {
-  background: url(../img/header__mider.jpg) center/cover;
+  background: url(../img/header__mider.jpg) center 60%/cover;
   min-height: 300px;
 }
 
@@ -245,7 +267,7 @@ div.hamburger > .inner {
 }
 
 .header-topick {
-  background: url(../img/topick__header.jpg) center/cover;
+  background: url(../img/topick__header.jpg) center center/cover;
   max-height: 500px;
 }
 
@@ -383,6 +405,10 @@ div.hamburger > .inner {
   background-color: #CDCDCD;
 }
 
+.news__container {
+  position: relative;
+}
+
 .news__title {
   padding-top: 60px;
   margin: 0;
@@ -391,11 +417,13 @@ div.hamburger > .inner {
   font-size: 3rem;
 }
 
-.sidbare__tags {
+.news__tags {
   font-size: 0.75rem;
   color: red;
   font-family: "OpenSans", sans-serif;
   font-weight: 600 italic;
+  margin-top: 0;
+  margin-bottom: 45px;
 }
 
 .green--line {
@@ -403,6 +431,13 @@ div.hamburger > .inner {
   height: 20px;
   background-color: #59A386;
   display: inline-block;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.news__content {
+  min-width: 461px;
+  position: relative;
 }
 
 .news__content-title {
@@ -410,6 +445,7 @@ div.hamburger > .inner {
   font-size: 1rem;
   color: #59A386;
   font-weight: 700;
+  margin-top: 0;
 }
 
 .news__content-text {
@@ -425,7 +461,12 @@ div.hamburger > .inner {
   display: inline;
 }
 
+.sidebar {
+  padding-left: 75px;
+}
+
 .tags__title {
+  margin-top: 67px;
   font-size: 1.125rem;
   color: #59A386;
   font-family: "BebasNeue", sans-serif;
@@ -437,21 +478,122 @@ div.hamburger > .inner {
   text-decoration: none;
   padding: 0.1875rem 0.8125rem 0.1875rem 0.6875rem;
   font-family: "OpenSans", sans-serif;
-  margin: 10px 0 0 6px;
+  display: inline-block;
+  margin: 5px 5px 0 0;
 }
 .tags__link:hover {
   background-color: #E2534B;
 }
 
+.side__blog-title {
+  margin-top: 54px;
+  font-size: 1.25rem;
+  font-family: "OpenSans", sans-serif;
+  color: #818181;
+}
+.side__blog-title .span--color {
+  color: #252222;
+}
+
+.blog__link {
+  width: 70px;
+  height: 70px;
+  background-color: #707070;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
 .news__info {
-  display: none;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  transform: translateX(-200%);
+  transition: 0.4s;
 }
 .news__info.active {
   display: block;
+  transform: translateX(0);
 }
 
 .tags__link.active {
   background-color: #E2534B;
+}
+
+.header__partners {
+  min-height: 200px;
+  background-color: #BEBEBE;
+  display: flex;
+  align-items: center;
+}
+
+.partners__list {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners__item {
+  margin-right: 80px;
+  text-decoration: none;
+}
+.partners__item:last-child {
+  margin-right: 0;
+}
+
+.header__bio {
+  background-color: #E2534B;
+  min-height: 600px;
+}
+
+.flex__bio {
+  display: flex;
+  justify-content: center;
+}
+
+.bio__title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: BebasNeue, sans-serif;
+  margin: 0;
+  padding-top: 2.0625rem;
+}
+
+.network__link {
+  text-decoration: none;
+}
+
+.avtore {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avtore__title {
+  font-family: BebasNeue, sans-serif;
+  font-size: 2.25rem;
+  color: #fff;
+  margin: 33px 0 23px;
+}
+
+.social__avtore {
+  margin: 48px 10px 0 0;
+}
+
+.background__title {
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: BebasNeue, sans-serif;
+  margin: 47px 0 13px 114px;
+}
+
+.background__text {
+  color: #fff;
+  font-size: 14px;
+  font-family: BebasNeue, sans-serif;
+  margin-bottom: 10px;
+  margin-left: 140px;
 }
 
 /*# sourceMappingURL=style.css.map */

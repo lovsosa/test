@@ -1,27 +1,38 @@
-.header__news 
+.header__news
   min-height: 680px
   background-color: #CDCDCD
+.news__container
+  position: relative
+
 .news__title
   padding-top: 60px
   margin: 0
   text-align: center
   font-family: 'BebasNeue', sans-serif
   font-size: 3rem
-.sidbare__tags
+.news__tags
   font-size: 0.75rem
   color: red
   font-family: "OpenSans", sans-serif
   font-weight: 600 italic
-.green--line 
+  margin-top: 0
+  margin-bottom: 45px
+.green--line
   width: 140px
   height: 20px
   background-color: #59A386
   display: inline-block
+  margin-top: 0
+  margin-bottom: 20px
+.news__content
+  min-width: 461px
+  position: relative
 .news__content-title
   font-family: 'OpenSans', sans-serif
   font-size: 1rem
   color: #59A386
   font-weight: 700
+  margin-top: 0
 .news__content-text
   font-size: 0.875rem
   color: #666767
@@ -30,7 +41,10 @@
   display: none
   &:first-child
     display: inline
+.sidebar
+  padding-left: 75px
 .tags__title
+  margin-top: 67px
   font-size: 1.125rem
   color: #59A386
   font-family: 'BebasNeue', sans-serif
@@ -40,12 +54,33 @@
   text-decoration: none
   padding: 0.1875rem 0.8125rem 0.1875rem 0.6875rem
   font-family: 'OpenSans', sans-serif
-  margin: 10px 0 0 6px
+  display: inline-block
+  margin: 5px 5px 0 0
   &:hover
     background-color: #E2534B
+.side__blog-title
+  margin-top: 54px
+  font-size: 1.25rem
+  font-family: 'OpenSans', sans-serif
+  color: #818181
+  .span--color
+    color: #252222
+.blog__link
+  width: 70px
+  height: 70px
+  background-color: #707070
+  border-radius: 8px
+  margin-top: 20px
+//JS 
 .news__info
-  display: none
+  position: absolute
+  top: 130px
+  left: 0
+  // display: none  
+  transform: translateX(-200%)
+  transition: 0.4s
   &.active
     display: block
+    transform: translateX(0)
 .tags__link.active
   background-color: #E2534B

@@ -596,4 +596,54 @@ div.hamburger > .inner {
   margin-left: 140px;
 }
 
+.header__contact {
+  background: url(../img/bg__contact.jpg);
+  min-height: 530px;
+}
+
+.contact__title {
+  font-family: BebasNeue, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.contact__number {
+  font-family: BebasNeue, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+
+.contact__gmail {
+  font-family: BebasNeue, sans-serif;
+  font-size: 3.75rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  border: 5px solid #fff;
+  margin-top: 14px;
+}
+
+.contact__id {
+  font-family: BebasNeue, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-top: 16px;
+}
+
+.contact__text {
+  font-family: BebasNeue, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-top: 130px;
+}
+
 /*# sourceMappingURL=style.css.map */

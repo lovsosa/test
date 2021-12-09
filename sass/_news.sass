@@ -3,7 +3,10 @@
   background-color: #CDCDCD
 .news__container
   position: relative
-
+  overflow: hidden
+.flex__container-news
+  display: grid
+  grid-template-columns: 1fr 1fr
 .news__title
   padding-top: 60px
   margin: 0
@@ -14,9 +17,12 @@
   font-size: 0.75rem
   color: red
   font-family: "OpenSans", sans-serif
-  font-weight: 600 italic
+  font-weight: 600
+  font-style: italic
   margin-top: 0
   margin-bottom: 45px
+  &::before
+    content: url(../img/tagicon.png)
 .green--line
   width: 140px
   height: 20px
@@ -26,7 +32,6 @@
   margin-bottom: 20px
 .news__content
   min-width: 461px
-  position: relative
 .news__content-title
   font-family: 'OpenSans', sans-serif
   font-size: 1rem
@@ -72,15 +77,23 @@
   border-radius: 8px
   margin-top: 20px
 //JS 
+// .news__infos
+//   display: flex
+//   overflow: hidden
 .news__info
-  position: absolute
-  top: 130px
-  left: 0
-  // display: none  
-  transform: translateX(-200%)
-  transition: 0.4s
+  // position: absolute
+  // top: 130px
+  // left: 0
+  display: none
+  // background: pink
+  // transform: translateX(-100%)
+  // transition: 0.4s
+  // +media(640px)
+  //   top: 0
+  //   height: 50vh
+  //   width: 100%
   &.active
     display: block
-    transform: translateX(0)
+    // transform: translateX(0)
 .tags__link.active
   background-color: #E2534B

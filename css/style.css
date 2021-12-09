@@ -12,6 +12,10 @@ body {
   display: block;
 }
 
+.header {
+  max-width: 1600px;
+}
+
 @media screen and (max-width: 640px) {
   .flex__container-news {
     display: flex;
@@ -262,10 +266,6 @@ div.hamburger > .inner {
   font-size: 1.5rem;
 }
 
-.header {
-  max-width: 1600px;
-}
-
 .header-topick {
   background: url(../img/topick__header.jpg) center center/cover;
   max-height: 500px;
@@ -285,6 +285,7 @@ div.hamburger > .inner {
   line-height: 0.8;
   margin-bottom: 0;
   font-family: "BebasNeue", sans-serif;
+  font-weight: 700;
 }
 .topick__text {
   margin-top: -6px;
@@ -407,6 +408,12 @@ div.hamburger > .inner {
 
 .news__container {
   position: relative;
+  overflow: hidden;
+}
+
+.flex__container-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .news__title {
@@ -421,9 +428,13 @@ div.hamburger > .inner {
   font-size: 0.75rem;
   color: red;
   font-family: "OpenSans", sans-serif;
-  font-weight: 600 italic;
+  font-weight: 600;
+  font-style: italic;
   margin-top: 0;
   margin-bottom: 45px;
+}
+.news__tags::before {
+  content: url(../img/tagicon.png);
 }
 
 .green--line {
@@ -437,7 +448,6 @@ div.hamburger > .inner {
 
 .news__content {
   min-width: 461px;
-  position: relative;
 }
 
 .news__content-title {
@@ -504,15 +514,10 @@ div.hamburger > .inner {
 }
 
 .news__info {
-  position: absolute;
-  top: 130px;
-  left: 0;
-  transform: translateX(-200%);
-  transition: 0.4s;
+  display: none;
 }
 .news__info.active {
   display: block;
-  transform: translateX(0);
 }
 
 .tags__link.active {
@@ -541,6 +546,10 @@ div.hamburger > .inner {
   margin-right: 0;
 }
 
+.partners__image {
+  max-width: 100%;
+}
+
 .header__bio {
   background-color: #E2534B;
   min-height: 600px;
@@ -552,6 +561,7 @@ div.hamburger > .inner {
 }
 
 .bio__title {
+  font-weight: 300;
   text-align: center;
   font-size: 3rem;
   font-family: BebasNeue, sans-serif;
@@ -571,8 +581,10 @@ div.hamburger > .inner {
 }
 
 .avtore__title {
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
+  font-weight: 400;
   font-size: 2.25rem;
+  text-transform: lowercase;
   color: #fff;
   margin: 33px 0 23px;
 }
@@ -582,6 +594,7 @@ div.hamburger > .inner {
 }
 
 .background__title {
+  font-weight: 200;
   color: #fff;
   font-size: 1.125rem;
   font-family: BebasNeue, sans-serif;
@@ -644,6 +657,37 @@ div.hamburger > .inner {
   color: #fff;
   display: block;
   margin-top: 130px;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Thin"), local("BebasNeue-Thin"), url("../font/bebasneue/bebasneuethin.woff2") format("woff2"), url("../font/bebasneue/bebasneuethin.woff") format("woff"), url("../font/bebasneue/bebasneuethin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Light"), local("BebasNeue-Light"), url("../font/bebasneue/bebasneuelight.woff2") format("woff2"), url("../font/bebasneue/bebasneuelight.woff") format("woff"), url("../font/bebasneue/bebasneuelight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Book"), local("BebasNeueBook"), url("../font/bebasneue/bebasneuebook.woff2") format("woff2"), url("../font/bebasneue/bebasneuebook.woff") format("woff"), url("../font/bebasneue/bebasneuebook.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Regular"), local("BebasNeueRegular"), url("../font/bebasneue/bebasneueregular.woff2") format("woff2"), url("../font/bebasneue/bebasneueregular.woff") format("woff"), url("../font/bebasneue/bebasneueregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Bold"), local("BebasNeueBold"), url("../font/bebasneue/bebasneuebold.woff2") format("woff2"), url("../font/bebasneue/bebasneuebold.woff") format("woff"), url("../font/bebasneue/bebasneuebold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,8 @@
 .flex__bio
   display: flex
   justify-content: center
+  +media(797px)
+    flex-direction: column
 .bio__title
   font-weight: 300
   text-align: center
@@ -14,7 +16,9 @@
 .network__link
   text-decoration: none
 .avtore
-  +flex($main: center, $dir: column, $cross: end)
+  +flex($main: center, $dir: column, $cross: center)
+  // +media(797px)
+  //   display: block
 .avtore__title
   font-family: Bebas Neue, sans-serif
   font-weight: 400
@@ -24,15 +28,23 @@
   margin: 33px 0 23px
 .social__avtore
   margin: 48px 10px 0 0
+.background
+  +media(797px)
+    margin-left: 0
+    text-align: center
 .background__title
   font-weight: 200
   color: #fff
   font-size: 1.125rem
   font-family: BebasNeue, sans-serif
   margin: 47px 0 13px 114px
+  +media(797px)
+    margin-left: 0
 .background__text
   color: #fff
   font-size: 14px
   font-family: BebasNeue, sans-serif
   margin-bottom: 10px
   margin-left: 140px
+  +media(797px)
+    margin-left: 0

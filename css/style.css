@@ -12,10 +12,6 @@ body {
   display: block;
 }
 
-.header {
-  max-width: 1600px;
-}
-
 @media screen and (max-width: 640px) {
   .flex__container-news {
     display: flex;
@@ -27,8 +23,16 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .flex__container-news .news__content-data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .flex__container-news .news__tags {
-    margin: 20px 0 15px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
   }
   .flex__container-news .sidebar {
     padding: 0 75px;
@@ -166,18 +170,20 @@ div.hamburger > .inner {
   margin: 0;
   padding: 40px 0 0;
   text-align: center;
-  color: #fff;
-  font-family: "BebasNeue";
-  font-size: 48px;
+  font-size: 3rem;
+  color: #ffffff;
+  font-family: "Bebas Neue";
+  text-align: center;
 }
 
 .portfolio__text {
   font-size: 24px;
   margin: 0;
   padding: 0 0 42px;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: "Bebas Neue";
   text-align: center;
-  font-family: "BebasNeue";
-  color: #fff;
 }
 
 .flex__container {
@@ -209,6 +215,13 @@ div.hamburger > .inner {
 .port__image {
   vertical-align: top;
   max-width: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 472px) {
+  .port__image {
+    height: 50vh;
+    object-fit: cover;
+  }
 }
 
 .post__icon {
@@ -236,6 +249,11 @@ div.hamburger > .inner {
   transform: translate(-50%, -400px);
   transition: 0.4s;
 }
+@media screen and (max-width: 472px) {
+  .search__position {
+    flex: 1 0 100%;
+  }
+}
 
 .icon__link {
   margin: 0 15px 15px;
@@ -255,14 +273,14 @@ div.hamburger > .inner {
 .mider__content .mider__title {
   color: #fff;
   text-align: center;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 2.25rem;
 }
 .mider__content .mider__text {
   margin-right: 50px;
   color: #fff;
   text-align: end;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
 }
 
@@ -284,14 +302,14 @@ div.hamburger > .inner {
   font-size: calc(50px + 40 * ((100vw - 320px) / 1280));
   line-height: 0.8;
   margin-bottom: 0;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
 }
 .topick__text {
   margin-top: -6px;
   color: #fff;
   margin-left: 27px;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: calc(22px + 14 * ((100vw - 320px) / 1280));
 }
 @media screen and (max-width: 320px) {
@@ -366,7 +384,7 @@ div.hamburger > .inner {
   color: #fff;
   transition: 0.4s;
   margin-left: 50px;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 @media screen and (max-width: 430px) {
   .nav__link {
@@ -411,11 +429,6 @@ div.hamburger > .inner {
   overflow: hidden;
 }
 
-.flex__container-news {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .news__title {
   padding-top: 60px;
   margin: 0;
@@ -425,6 +438,7 @@ div.hamburger > .inner {
 }
 
 .news__tags {
+  margin-left: auto;
   font-size: 0.75rem;
   color: red;
   font-family: "OpenSans", sans-serif;
@@ -440,14 +454,22 @@ div.hamburger > .inner {
 .green--line {
   width: 140px;
   height: 20px;
+  text-align: center;
   background-color: #59A386;
   display: inline-block;
   margin-top: 0;
   margin-bottom: 20px;
+  font-size: 0.6875rem;
+  line-height: 21px;
+  color: #fffefe;
+  font-weight: 400;
+  font-family: "Open Sans";
 }
 
-.news__content {
-  min-width: 461px;
+.news__content-data {
+  display: flex;
+  margin-top: 82px;
+  margin-bottom: 27px;
 }
 
 .news__content-title {
@@ -515,6 +537,7 @@ div.hamburger > .inner {
 
 .news__info {
   display: none;
+  max-width: 100%;
 }
 .news__info.active {
   display: block;
@@ -537,8 +560,15 @@ div.hamburger > .inner {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 797px) {
+  .partners__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .partners__item {
+  list-style: none;
   margin-right: 80px;
   text-decoration: none;
 }
@@ -559,6 +589,11 @@ div.hamburger > .inner {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 797px) {
+  .flex__bio {
+    flex-direction: column;
+  }
+}
 
 .bio__title {
   font-weight: 300;
@@ -575,7 +610,7 @@ div.hamburger > .inner {
 
 .avtore {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
@@ -593,12 +628,24 @@ div.hamburger > .inner {
   margin: 48px 10px 0 0;
 }
 
+@media screen and (max-width: 797px) {
+  .background {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 .background__title {
   font-weight: 200;
   color: #fff;
   font-size: 1.125rem;
   font-family: BebasNeue, sans-serif;
   margin: 47px 0 13px 114px;
+}
+@media screen and (max-width: 797px) {
+  .background__title {
+    margin-left: 0;
+  }
 }
 
 .background__text {
@@ -608,6 +655,11 @@ div.hamburger > .inner {
   margin-bottom: 10px;
   margin-left: 140px;
 }
+@media screen and (max-width: 797px) {
+  .background__text {
+    margin-left: 0;
+  }
+}
 
 .header__contact {
   background: url(../img/bg__contact.jpg);
@@ -616,7 +668,7 @@ div.hamburger > .inner {
 
 .contact__title {
   font-family: BebasNeue, sans-serif;
-  font-size: 3rem;
+  font-size: 48px;
   text-align: center;
   padding-top: 2.5rem;
   margin-top: 0;
@@ -625,7 +677,7 @@ div.hamburger > .inner {
 
 .contact__number {
   font-family: BebasNeue, sans-serif;
-  font-size: 3rem;
+  font-size: calc(30px + 18 * ((100vw - 320px) / 1280));
   text-align: center;
   color: #fff;
   display: block;
@@ -633,7 +685,7 @@ div.hamburger > .inner {
 
 .contact__gmail {
   font-family: BebasNeue, sans-serif;
-  font-size: 3.75rem;
+  font-size: calc(30px + 30 * ((100vw - 320px) / 1280));
   text-align: center;
   color: #fff;
   display: block;

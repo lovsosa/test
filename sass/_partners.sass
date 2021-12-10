@@ -5,7 +5,11 @@
 .partners__list
   margin: 0
   +flex($main: center, $cross: center)
+  +media(797px)
+    flex-direction: column
+    align-items: center
 .partners__item
+  list-style: none
   margin-right: 80px
   text-decoration: none
   &:last-child

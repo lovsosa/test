@@ -1,27 +1,36 @@
 .header-topick
   background: url(../img/topick__header.jpg) center center / cover
-  max-height: 500px
+  max-height: 600px
 .container-topick
   margin: auto
   max-width: 1162px
 .topick
-  padding: 95px 0 139px
+  display: flex
+  justify-content: center
+  align-items: start
+  flex-direction: column
   &__title
     color: #ffffff
-    +adp-font(90, 50)
+    // +adp-font(90, 50)
+    font-size: 5.625rem
     line-height: 0.8
     margin-bottom: 0
     font-family: 'Bebas Neue', sans-serif
     font-weight: 700
-
+    +media(464px)
+      font-size: 3.125rem
   &__text
     margin-top: -6px
     color: #fff
     margin-left: 27px
     font-family: 'Bebas Neue', sans-serif
-    +adp-font(36, 22)
+    // +adp-font(36, 22)
+    font-size: 2.25rem
+    line-height: 0.8
+    +media(464px)
+      margin-top: 0
+      font-size: 1.375rem
     +media(320px)
-      line-height: 18px
       margin-top: 0
 .title-left:first-child
   margin-left: 56px

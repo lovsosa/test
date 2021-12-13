@@ -286,7 +286,7 @@ div.hamburger > .inner {
 
 .header-topick {
   background: url(../img/topick__header.jpg) center center/cover;
-  max-height: 500px;
+  max-height: 600px;
 }
 
 .container-topick {
@@ -295,26 +295,40 @@ div.hamburger > .inner {
 }
 
 .topick {
-  padding: 95px 0 139px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
 }
 .topick__title {
   color: #ffffff;
-  font-size: calc(50px + 40 * ((100vw - 320px) / 1280));
+  font-size: 5.625rem;
   line-height: 0.8;
   margin-bottom: 0;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
+}
+@media screen and (max-width: 464px) {
+  .topick__title {
+    font-size: 3.125rem;
+  }
 }
 .topick__text {
   margin-top: -6px;
   color: #fff;
   margin-left: 27px;
   font-family: "Bebas Neue", sans-serif;
-  font-size: calc(22px + 14 * ((100vw - 320px) / 1280));
+  font-size: 2.25rem;
+  line-height: 0.8;
+}
+@media screen and (max-width: 464px) {
+  .topick__text {
+    margin-top: 0;
+    font-size: 1.375rem;
+  }
 }
 @media screen and (max-width: 320px) {
   .topick__text {
-    line-height: 18px;
     margin-top: 0;
   }
 }
@@ -433,7 +447,7 @@ div.hamburger > .inner {
   padding-top: 60px;
   margin: 0;
   text-align: center;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3rem;
 }
 
@@ -573,7 +587,13 @@ div.hamburger > .inner {
   text-decoration: none;
 }
 .partners__item:last-child {
-  margin-right: 0;
+  margin-right: 15px;
+}
+@media screen and (max-width: 797px) {
+  .partners__item {
+    margin: 0;
+    margin: 25px 0;
+  }
 }
 
 .partners__image {
@@ -596,10 +616,9 @@ div.hamburger > .inner {
 }
 
 .bio__title {
-  font-weight: 300;
   text-align: center;
   font-size: 3rem;
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   margin: 0;
   padding-top: 2.0625rem;
 }
@@ -639,7 +658,7 @@ div.hamburger > .inner {
   font-weight: 200;
   color: #fff;
   font-size: 1.125rem;
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   margin: 47px 0 13px 114px;
 }
 @media screen and (max-width: 797px) {
@@ -651,7 +670,7 @@ div.hamburger > .inner {
 .background__text {
   color: #fff;
   font-size: 14px;
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   margin-bottom: 10px;
   margin-left: 140px;
 }
@@ -667,7 +686,7 @@ div.hamburger > .inner {
 }
 
 .contact__title {
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   font-size: 48px;
   text-align: center;
   padding-top: 2.5rem;
@@ -676,7 +695,7 @@ div.hamburger > .inner {
 }
 
 .contact__number {
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   font-size: calc(30px + 18 * ((100vw - 320px) / 1280));
   text-align: center;
   color: #fff;
@@ -694,7 +713,7 @@ div.hamburger > .inner {
 }
 
 .contact__id {
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   font-size: 30px;
   text-align: center;
   color: #fff;
@@ -703,7 +722,7 @@ div.hamburger > .inner {
 }
 
 .contact__text {
-  font-family: BebasNeue, sans-serif;
+  font-family: Bebas Neue, sans-serif;
   font-size: 14px;
   text-align: center;
   color: #fff;

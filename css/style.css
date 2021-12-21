@@ -12,6 +12,40 @@ body {
   display: block;
 }
 
+.inner {
+  display: block;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Thin"), local("BebasNeue-Thin"), url("../font/bebasneue/bebasneuethin.woff2") format("woff2"), url("../font/bebasneue/bebasneuethin.woff") format("woff"), url("../font/bebasneue/bebasneuethin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Light"), local("BebasNeue-Light"), url("../font/bebasneue/bebasneuelight.woff2") format("woff2"), url("../font/bebasneue/bebasneuelight.woff") format("woff"), url("../font/bebasneue/bebasneuelight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Book"), local("BebasNeueBook"), url("../font/bebasneue/bebasneuebook.woff2") format("woff2"), url("../font/bebasneue/bebasneuebook.woff") format("woff"), url("../font/bebasneue/bebasneuebook.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Regular"), local("BebasNeueRegular"), url("../font/bebasneue/bebasneueregular.woff2") format("woff2"), url("../font/bebasneue/bebasneueregular.woff") format("woff"), url("../font/bebasneue/bebasneueregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Bold"), local("BebasNeueBold"), url("../font/bebasneue/bebasneuebold.woff2") format("woff2"), url("../font/bebasneue/bebasneuebold.woff") format("woff"), url("../font/bebasneue/bebasneuebold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 @media screen and (max-width: 640px) {
   .flex__container-news {
     display: flex;
@@ -276,6 +310,12 @@ div.hamburger > .inner {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.25rem;
 }
+.mider__content .mider__title::after {
+  content: '"';
+}
+.mider__content .mider__title::before {
+  content: '"';
+}
 .mider__content .mider__text {
   margin-right: 50px;
   color: #fff;
@@ -366,7 +406,7 @@ div.hamburger > .inner {
 }
 
 .nav {
-  margin: auto;
+  margin-left: auto;
   transition: 0.4s;
 }
 @media screen and (max-width: 992px) {
@@ -397,7 +437,7 @@ div.hamburger > .inner {
   font-size: 1.125rem;
   color: #fff;
   transition: 0.4s;
-  margin-left: 50px;
+  margin-right: 3.125rem;
   font-family: "Bebas Neue", sans-serif;
 }
 @media screen and (max-width: 430px) {
@@ -515,7 +555,7 @@ div.hamburger > .inner {
   margin-top: 67px;
   font-size: 1.125rem;
   color: #59A386;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .tags__link {
@@ -547,6 +587,14 @@ div.hamburger > .inner {
   background-color: #707070;
   border-radius: 8px;
   margin-top: 20px;
+}
+
+.news__infos::after {
+  content: "Read more...";
+  color: #e2534b;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Open Sans";
 }
 
 .news__info {
@@ -650,16 +698,19 @@ div.hamburger > .inner {
 @media screen and (max-width: 797px) {
   .background {
     margin-left: 0;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .background__title {
-  font-weight: 200;
+  font-weight: 400;
   color: #fff;
   font-size: 1.125rem;
   font-family: Bebas Neue, sans-serif;
-  margin: 47px 0 13px 114px;
+  margin: 47px 0 13px 139px;
 }
 @media screen and (max-width: 797px) {
   .background__title {
@@ -670,7 +721,7 @@ div.hamburger > .inner {
 .background__text {
   color: #fff;
   font-size: 14px;
-  font-family: Bebas Neue, sans-serif;
+  font-family: Open sans, sans-serif;
   margin-bottom: 10px;
   margin-left: 140px;
 }
@@ -728,37 +779,6 @@ div.hamburger > .inner {
   color: #fff;
   display: block;
   margin-top: 130px;
-}
-
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue Thin"), local("BebasNeue-Thin"), url("../font/bebasneue/bebasneuethin.woff2") format("woff2"), url("../font/bebasneue/bebasneuethin.woff") format("woff"), url("../font/bebasneue/bebasneuethin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue Light"), local("BebasNeue-Light"), url("../font/bebasneue/bebasneuelight.woff2") format("woff2"), url("../font/bebasneue/bebasneuelight.woff") format("woff"), url("../font/bebasneue/bebasneuelight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue Book"), local("BebasNeueBook"), url("../font/bebasneue/bebasneuebook.woff2") format("woff2"), url("../font/bebasneue/bebasneuebook.woff") format("woff"), url("../font/bebasneue/bebasneuebook.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue Regular"), local("BebasNeueRegular"), url("../font/bebasneue/bebasneueregular.woff2") format("woff2"), url("../font/bebasneue/bebasneueregular.woff") format("woff"), url("../font/bebasneue/bebasneueregular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue Bold"), local("BebasNeueBold"), url("../font/bebasneue/bebasneuebold.woff2") format("woff2"), url("../font/bebasneue/bebasneuebold.woff") format("woff"), url("../font/bebasneue/bebasneuebold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
